@@ -16,6 +16,8 @@ ENV COWRIE_GROUP=cowrie \
     COWRIE_USER=cowrie \
     COWRIE_HOME=/cowrie
     USER ${COWRIE_USER}:${COWRIE_GROUP}
+    RUN chown -R ${COWRIE_USER}:${COWRIE_GROUP} /cowrie
+
 
 # Set locale to UTF-8, otherwise upstream libraries have bytes/string conversion issues
 ENV LC_ALL=en_US.UTF-8 \
