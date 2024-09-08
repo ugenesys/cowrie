@@ -15,6 +15,7 @@ ENV CRYPTOGRAPHY_DONT_BUILD_RUST=1
 ENV COWRIE_GROUP=cowrie \
     COWRIE_USER=cowrie \
     COWRIE_HOME=/cowrie
+    USER ${COWRIE_USER}:${COWRIE_GROUP}
 
 # Set locale to UTF-8, otherwise upstream libraries have bytes/string conversion issues
 ENV LC_ALL=en_US.UTF-8 \
